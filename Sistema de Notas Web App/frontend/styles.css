@@ -1,0 +1,85 @@
+/* styles.css */
+
+body {
+  background-color: #f4f5f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #2c3e50;
+}
+
+.note-card {
+  background-color: #ffffff;
+  border-left: 5px solid #007bff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.note-card.complete {
+  background-color: #d4edda;
+  border-color: #28a745;
+  text-decoration: line-through;
+}
+
+.note-card.archived {
+  opacity: 0.6;
+}
+
+.note-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.note-category {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.note-priority {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#notesContainer {
+  min-height: 50vh;
+}
+
+#noteTabs .nav-link.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.modal-title {
+  color: #0d6efd;
+}
+
+/* Custom Category Field */
+#customCategoryContainer {
+  transition: all 0.3s ease;
+}
+
+/* Colores por categoría */
+.note-card[data-category="Estudios"] {
+  border-left-color: #6f42c1;
+}
+
+.note-card[data-category="Trabajo"] {
+  border-left-color: #fd7e14;
+}
+
+.note-card[data-category="Personal"] {
+  border-left-color: #20c997;
+}
+
+.note-card[data-category]:not([data-category="Estudios"]):not([data-category="Trabajo"]):not([data-category="Personal"]) {
+  border-left-color: #17a2b8; /* para categorías personalizadas */
+}
